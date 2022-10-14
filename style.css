@@ -1,8 +1,14 @@
+@font-face {
+    font-family: "Noto Sans";
+    src: url(fonts/NotoSansJP-Regular.otf);
+}
+
 html {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
+    font-family: "Noto Sans", 'Courier New', Courier, monospace;
 }
 
 body {
@@ -11,21 +17,76 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
+    color: #04080F;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
 
 .left {
-    width: 33%;
-    margin: 0;
-    padding: 0;
+    width: 40%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7)
+    background-image: url(images/valentin-beauvais-yVUQlyRlJSw-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.logo {
+    width: 40%;
+    height: 175px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 160px;
+    align-self: center;
+}
+
+.odin-text {
+    opacity: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+}
+
+.odin {
+    font-size: 5.25rem;
+    height: 100px;
+    font-weight: 700;
+}
+
+.subtext {
+    font-size: 1.5rem;
+}
+
+.photo-info {
+    color: white;
+    font-size: 0.7rem;
+    position: fixed;
+    bottom: 0;
+}
+
+.photo-info a {
+    color: white;
 }
 
 .right {
     height: 100%;
-    width: 67%;
+    width: 60%;
     display: flex;
     flex-direction: column;
+    background-color: whitesmoke;
 }
 
 .form {
@@ -34,7 +95,7 @@ body {
 
 .form-header {
     padding-top: 20px;
-    padding-bottom: 0;
+    padding-bottom: 20px;
     width: 100%;
     font-size: 1.7rem;
     font-weight: 600;
@@ -58,9 +119,10 @@ body {
 
 .container {
     width: 100%;
-    background-color: whitesmoke;
+    background-color: white;
     box-shadow: 0px 5px 5px rgba(113, 113, 113, 0.5);
     padding-bottom: 10px;
+    height: 80%;
 }
 
 .fields {
@@ -70,31 +132,63 @@ body {
     width: 70%;
 }
 
+label {
+    font-size: 13px;
+    color: #04080F;
+}
+
 input {
-    width: 90%;
-    height: 70%;
-    border: 1px solid black;
+    width: 95%;
+    height: 60%;
+    border: 1px solid #E5E7EB;
     border-radius: 3px;
+    padding-left: 10px;
 }
 
 .input {
     padding-bottom: 30px;
     width: 40%;
+    padding-right: 75px;
 }
+
+input:focus {
+    box-shadow: 2px 2px 2px rgba(113, 113, 113, 0.5);
+    outline: none;
+    border: 1px solid #621448;
+}
+
 
 .button {
     margin-top: 20px;
 }
 
 button {
-    width: 200px;
-    height: 40px;
+    width: 225px;
+    height: 50px;
+    border-color: #081D43;
     border-radius: 8px;
-    background-color: gray;
+    background-color: #081D43;
+    font-size: 1.3rem;
+    color: white;
+    box-shadow: 0px 3px 3px rgba(113, 113, 113, 0.5);
+}
+
+button:active {
+    background-color: #FB0004;
+    border-color: #FB0004;
 }
 
 .login {
     padding-top: 20px;
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+a {
+    color: #621448;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
